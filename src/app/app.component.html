@@ -2,57 +2,53 @@
 
 
 <header>
-    <h1>Bienvenido a Mi Página de Turismo</h1>
-    <p>Descubre los mejores destinos y atracciones</p>
-  </header>
+    <h1>Bienvenido a Mi Página de Turismo Perú</h1>
+    <p>Descubre los destinos turísticos más fascinantes del Perú: Machu Picchu, la Amazonía, la costa y mucho más.</p>
+</header>
 
-  <!-- Menú de navegación -->
-  <nav>
-    <p-menubar [model]="items" />
-  </nav>
+<!-- Menú de navegación -->
+<nav>
+  <p-menubar [model]="items" />
+</nav>
 
-  <!-- Contenido principal -->
-  <main>
-    <div style="width: 50%;">
-      <p-inputGroup>
-        <p-dropdown 
-          [options]="departamentos" 
-          [(ngModel)]="selectedDep" 
-          optionLabel="name" 
-          [style]="{'width':'100%'}"
-          placeholder="Departamento" 
-          (onChange)="onChange($event)"/>
-        <p-dropdown 
-          [options]="provincias" 
-          [(ngModel)]="selectedProv" 
-          optionLabel="name" 
-          [style]="{'width':'100%'}"
-          placeholder="Provincia" />
-        <div class="card flex justify-content-center">
-          <p-calendar [(ngModel)]="date" 
-            [iconDisplay]="'input'"
-            [style]="{'width':'100%'}" 
-            [showIcon]="true" />
-        </div>
-        <button type="button" pButton icon="pi pi-search" class="p-button-warning" (click)="onClick()"></button>
-      </p-inputGroup>
-    </div>
-    
-    <!-- <div class="custom-card">
-      <img src="assets/image1.png" alt="As de Copas" />
-    </div> -->
+<!-- Contenido principal -->
+<main>
+  <div style="width: 50%;">
+    <p-inputGroup>
+      <p-dropdown 
+        [options]="departamentos" 
+        [(ngModel)]="selectedDep" 
+        optionLabel="name" 
+        [style]="{'width':'100%'}"
+        placeholder="Departamento" 
+        (onChange)="onChange($event)"/>
+      <p-dropdown 
+        [options]="provincias" 
+        [(ngModel)]="selectedProv" 
+        optionLabel="name" 
+        [style]="{'width':'100%'}"
+        placeholder="Provincia" />
+      <div class="card flex justify-content-center">
+        <p-calendar [(ngModel)]="date" 
+          [iconDisplay]="'input'"
+          [style]="{'width':'100%'}" 
+          [showIcon]="true" />
+      </div>
+      <button type="button" pButton icon="pi pi-search" class="p-button-warning" (click)="onClick()"></button>
+    </p-inputGroup>
+  </div>
 
-    <div class="grid-container">
-      @for (img of images; track img) {
-        <div class="custom-card">
-          <img [src]="img" alt="As de Copas" />
-        </div>
-      }
-    </div>
+  <div class="grid-container">
+    @for (img of images; track img) {
+      <div class="custom-card">
+        <img [src]="img" alt="imagen turismo" />
+      </div>
+    }
+  </div>
 
-  </main>
+</main>
 
-  <!-- Pie de página -->
-  <!-- <footer>
-    <p>&copy; 2025 Mi Página de Turismo. Todos los derechos reservados.</p>
-  </footer> -->
+<!-- Pie de página -->
+<!-- <footer>
+  <p>&copy; 2025 Mi Página de Turismo. Todos los derechos reservados.</p>
+</footer> -->
